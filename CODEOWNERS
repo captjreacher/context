@@ -1,0 +1,11 @@
+# MGRNZ Context — Code Owners
+# These owners will be requested for review on PRs
+
+# Default: repository owner reviews all changes
+* @captjreacher
+
+# Ecosystem core docs require owner review
+/ecosystem/ @captjreacher
+
+# Standards changes require owner review
+/standards/ @captjreacher
