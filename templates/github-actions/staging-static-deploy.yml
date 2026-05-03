@@ -1,0 +1,21 @@
+name: staging-deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm run build
+      - run: |
+          test -d dist
+          test -f dist/index.html
+      - run: echo "Deploy dist to staging.maximisedai.com/<app_slug>/ via approved adapter"
+      - run: echo "Emit deployment events for Cockpit"
