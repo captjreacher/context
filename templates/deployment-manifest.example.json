@@ -1,0 +1,16 @@
+{
+  "app_slug": "one-shot-app",
+  "repo": "captjreacher/one-shot-app",
+  "project": "maxai",
+  "environment": "staging",
+  "domain": "staging.maximisedai.com",
+  "public_url": "https://staging.maximisedai.com/one-shot-app/",
+  "build": {
+    "command": "npm run build",
+    "output_dir": "dist"
+  },
+  "deployment": {
+    "mode": "static",
+    "policy": "staging-only"
+  }
+}
