@@ -22,18 +22,17 @@ Products should remain independent. Shared behaviour should be expressed through
 2. ecosystem/ecosystem-context.md
 3. ecosystem/router-prompt.md
 4. ecosystem/deployment-airway.md
-5. standards/repo-boundaries.md
-6. standards/staging-only-policy.md
-7. blueprints/events/deployment-events-v1.md
-8. templates/github-actions/staging-static-deploy.yml
+5. ecosystem/staging-implementation.md
+6. standards/repo-boundaries.md
+7. standards/staging-only-policy.md
+8. blueprints/events/deployment-events-v1.md
+9. templates/github-actions/staging-static-deploy.yml
 
 ## Deployment Rule
 
 New builds and one-shot apps may deploy to staging only:
 
-```text
 https://staging.maximisedai.com/<app-slug>/
-```
 
 They must not deploy to production domains unless a separate Cockpit-controlled production promotion process exists.
 
