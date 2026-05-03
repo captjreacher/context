@@ -1,0 +1,60 @@
+# MGRNZ Ecosystem Index
+# Machine-readable registry of ecosystem components
+
+version: "1.0"
+lastUpdated: "2026-05-03"
+
+core:
+  name: MGRNZ
+  role: orchestration
+  description: Central event bus and coordination layer
+
+products: []
+  # Products will be registered here as they integrate
+  # Example:
+  # - id: product-a
+  #   name: Product A
+  #   repo: org/product-a
+  #   events:
+  #     emits: [event.type.one, event.type.two]
+  #     subscribes: [event.type.three]
+
+eventTypes: []
+  # Canonical event types will be registered here
+  # Example:
+  # - type: order.created
+  #   schema: /blueprints/events/order-created.json
+  #   emitters: [product-a]
+  #   subscribers: [product-b, product-c]
+
+directories:
+  ecosystem: /ecosystem/
+  templates: /templates/
+  blueprints: /blueprints/
+  standards: /standards/
+
+phases:
+  current: 1
+  roadmap:
+    - phase: 1
+      name: Bootstrap
+      status: complete
+      contents:
+        - ecosystem-context.md
+        - index.yaml
+        - router-prompt.md
+        - governance files
+    - phase: 2
+      name: Templates & Blueprints
+      status: planned
+      contents:
+        - canonical templates
+        - enforcement blueprints
+        - event schemas
+    - phase: 3
+      name: Standards & Constitution
+      status: planned
+      contents:
+        - agent constitution
+        - cross-cutting standards
+        - compliance requirements
