@@ -2,14 +2,20 @@
 # Machine-readable registry of ecosystem components
 
 version: "1.0"
-lastUpdated: "2026-05-03"
+lastUpdated: "2026-05-07"
 
 core:
   name: MGRNZ
   role: orchestration
   description: Central event bus and coordination layer
 
-products: []
+products:
+  - name: FunkMyBrand / PlayerCard
+    slug: playercard
+    repo: captjreacher/playercard
+    deploymentUrl: https://app.funkmybrand.com
+    status: active
+    phase: 1
   # Products will be registered here as they integrate
   # Example:
   # - id: product-a
@@ -19,7 +25,31 @@ products: []
   #     emits: [event.type.one, event.type.two]
   #     subscribes: [event.type.three]
 
-eventTypes: []
+eventTypes:
+  - name: cv.deployment.created
+    source: playercard
+    version: v1
+    spec: blueprints/events/cv-analytics-events-v1.md
+  - name: cv.link.viewed
+    source: playercard
+    version: v1
+    spec: blueprints/events/cv-analytics-events-v1.md
+  - name: cv.link.shared
+    source: playercard
+    version: v1
+    spec: blueprints/events/cv-analytics-events-v1.md
+  - name: cv.version.archived
+    source: playercard
+    version: v1
+    spec: blueprints/events/cv-analytics-events-v1.md
+  - name: cv.analytics.viewed
+    source: playercard
+    version: v1
+    spec: blueprints/events/cv-analytics-events-v1.md
+  - name: cv.archetype.selected
+    source: playercard
+    version: v1
+    spec: blueprints/events/cv-analytics-events-v1.md
   # Canonical event types will be registered here
   # Example:
   # - type: order.created
